@@ -12,9 +12,9 @@ Product.init(
     // define columns
     id: {
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
+      primaryKey: true
     },
     product_name: {
       type: DataTypes.STRING,
@@ -29,8 +29,8 @@ Product.init(
     },
     stock: { 
       type: DataTypes.INTEGER,
+      defaultValue: 1,
       allowNull: false,
-      defaultValue: 10,
       validate: {
         isNumeric: true
       }
